@@ -1,0 +1,11 @@
+voter_file: data/raw/Vlist.csv
+districts_file: data/raw/precincts_city_council_districts.csv
+name_categories_file: data/raw/all_name_categories.csv
+output_file: data/output/voter_analysis_by_district_and_category.csv
+
+# Column names in the voter file
+col_first: Name First
+col_last: Name Last
+col_precinct: Precinct
+col_voter_id: Voter ID
+col_district: City_Council_District
