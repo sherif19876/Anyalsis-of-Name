@@ -1,0 +1,25 @@
+# Multi‑Category Voter Analysis by City Council District
+
+This tool processes a voter file, a precinct‑to‑district mapping file, and a custom name‑category CSV to produce district‑level statistics. It supports **any number of categories** (e.g., "Central African", "East African (Muslim)", "South Asian (Hindu)") and uses a flexible name‑matching rule: a voter is assigned to a category if their first name **or** last name appears in that category's list of first names **or** last names.
+
+## Features
+
+- Works with any voter file that contains columns: `Precinct`, `Name First`, `Name Last`, `Voter ID`.
+- Cleans precinct numbers (removes trailing `.1`).
+- Merges precincts to city council districts.
+- Supports unlimited categories via a simple CSV file.
+- Outputs a district‑level CSV with:
+  - `City_Council_District`
+  - `Total_Voters`
+  - For each category: `{Category}_Count` and `{Category}_Percentage`
+
+## Requirements
+
+- Python 3.6+
+- `pandas`
+- `openpyxl` (if input files are Excel – the script uses CSV, adjust as needed)
+
+Install pandas with:
+
+```bash
+pip install pandas
