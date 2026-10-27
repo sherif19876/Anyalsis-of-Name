@@ -1,0 +1,26 @@
+# Data (PII — never commit)
+data/raw/*
+!data/raw/.gitkeep
+data/output/*
+!data/output/.gitkeep
+*.csv
+*.xlsx
+*.xls
+
+# Local config with machine paths
+config/config.yaml
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
